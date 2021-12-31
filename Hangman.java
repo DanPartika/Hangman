@@ -117,9 +117,8 @@ public class Hangman {
                     check += 1;
                 } 
             }
-            System.out.println(check);
             if (check == 0) {       
-                System.out.println(guessLetter + " is not correct, try again. " + check);
+                System.out.println(guessLetter + " is not correct, try again. ");
                 numwrong++;
                 PrintGameWrong(numwrong);
 
@@ -133,6 +132,7 @@ public class Hangman {
         for (int i = 0; i<wordLength; i++) {
             if (fillinWord[i] != word.charAt(i)) {
                 System.out.println("\nEnd game, you Lose. \nWord was: " + word);
+                break;
             } 
         }
         int i = 0;
